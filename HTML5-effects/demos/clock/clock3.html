@@ -117,5 +117,26 @@
 			clock.appendChild(oDiv);
 		}
 		var oDate = new Date();
+		var oS = oDate.getSeconds();
+		var oM = oDate.getMinutes();
+		var oH = oDate.getHours();
+		seconds.style.transform = 'rotate('+oS*6+'deg)';
+		minutes.style.transform = 'rotate('+oM*6+'deg)';
+		Hours.style.transform = 'rotate('+(oH%12)*30+'deg)';
+
+		
+		setInterval(function(){
+			var oDate = new Date();
+			/*1m - 6deg*/
+			var oS = oDate.getSeconds();
+			var oM = oDate.getMinutes();
+			var oH = oDate.getHours();
+			seconds.style.transform = 'rotate('+oS*6+'deg)';
+			minutes.style.transform = 'rotate('+oM*6+'deg)';
+			Hours.style.transform = 'rotate('+(oH%12)*30+'deg)';		
+		},1000);
+		
+		
+		
 	</script>
 </html>
