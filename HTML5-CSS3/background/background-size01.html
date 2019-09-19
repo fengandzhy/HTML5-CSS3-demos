@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>background-size  测试</title>
+		<style type="text/css">
+			body {line-height:2.4;font-size:20px;}
+			p {color:#fff;margin:0;}
+			#my{
+				height:10em;/*em是body的字体大小*/
+				width:10em;
+				border:1px solid #7d7;
+				background: url(../img/cart.png) no-repeat;
+				}
+			#my1{
+				height:10em;/*em是body的字体大小*/
+				width:10em;
+				border:1px solid #7d7;
+				background: url(../img/cart.png) no-repeat;
+				background-size: 35px 40px; /*向x轴y轴的大小分别是35px和40px，在这个35px*40px的范围内显示图片，就等于把图片放大或者缩小*/
+				}
+		</style>		
+	</head>
+	<body>		
+		<div id="my">			
+		</div>
+		
+		<div id="my1">			
+		</div>
+	</body>
+</html>

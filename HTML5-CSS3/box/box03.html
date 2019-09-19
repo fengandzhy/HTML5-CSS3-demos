@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>border-box 子元素撑开父元素</title>
+		<style type="text/css">
+			body {line-height:2.4;font-size:20px;}
+			p {color:#fff;margin:0;}
+			#father {box-sizing:border-box;height:10px;width:200px;}
+			#son {box-sizing:border-box;padding:20px;background-color: #008000;}
+		</style>
+	</head>
+	<body>
+		<!--	当box-sizing:border-box 这个盒子的高度宽度确定之后，里面的子元素是无法撑开父元素的-->
+		<div id="father">
+			<div id="son">
+				
+			</div>
+		</div>
+	</body>
+</html>

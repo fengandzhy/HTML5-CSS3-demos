@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹性布局</title>
+		<style type="text/css">
+			#a {background-color:#357;width:500px;height:300px;display:flex;flex-direction:row-reverse}
+			.b {width:150px;height:100px;line-height:100px;text-align:center;color:#fff;font-size:50px;}
+			.box1 {background-color:#f54;}
+			.box2 {background-color:#0b9;}
+			.box3 {background-color:#07f;}
+		</style>		
+	</head>
+	<body>
+		<!--当加入display:flex的时候，三个盒子横向排列 子元素的float、clear和vertical-align属性将失效-->
+		
+		<div id="a" >
+			<div class="b box1">1</div>
+			<div class="b box2">2</div>
+			<div class="b box3">3</div>
+		</div>
+	</body>
+</html>

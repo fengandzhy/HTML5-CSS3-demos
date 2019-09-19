@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>溢出文本省略</title>
+		<style type="text/css">			
+			p {color:#fff;margin:0;width:50px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+			#my {background:#777;width:10em;padding:20px;border:20px solid #7d7;}
+		</style>		
+	</head>
+	<body>
+		<!--实际上，text-overflow属性仅用于决定当文本溢出时是否显示省略标记，并不具备样式定义的功能，			
+		要实现溢出时产生省略号的效果，应该在定义两个样式：强制文本在一行内显示（white-space:nowrap）
+		和溢出内容为隐藏（overflow:hidden），只有这样才能实现溢出文本显示为省略号效果-->
+		<div id="my">
+			<p>米奇米妮唐纳德高飞米奇米妮唐纳德高飞米奇米妮唐纳德高飞</p>
+		</div>
+	</body>
+</html>
