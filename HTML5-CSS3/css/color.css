@@ -1,5 +1,0 @@
-@charset "utf-8";
-p{
-	color:rgba(255,0,0,0.5);/*0.5是透明值*/
-	text-shadow: 5px 5px 3px green; /*字体悬浮*/
-}
