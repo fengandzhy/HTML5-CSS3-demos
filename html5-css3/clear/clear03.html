@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动3</title>
+</head>
+<style type="text/css">
+    /*如果不加这个*/
+    .outer{border: 1px solid #ccc;background: #fc9;color: #fff; margin: 50px auto;padding: 50px;}
+    .div1{width: 80px;height: 80px;background: red;float: left;}
+    .div2{width: 80px;height: 80px;background: blue;float: left;}
+    .div3{width: 80px;height: 80px;background: sienna;float: left;}
+
+    /*对于清除浮动 必须是display:block; 不能是position:absolute; 虽然position:absolute; 也会是块级元素,但它漂浮起来了*/
+    .outer:after{
+        content: '';
+        clear:both;
+        display:block;
+        height:0px;
+        width:0px;
+        visibility: hidden;
+    }
+</style>
+<body>
+<div class="outer">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+</div>
+</body>
+</html>

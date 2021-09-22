@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+</head>
+<style type="text/css">
+    /*
+        我们先将first元素内边距设为20px，那么second元素就得向下偏移40px，所以padding是占据文档空间
+    */
+    #first { width: 200px; height: 100px; border: 1px solid red; position: relative; top: 20px; left: 20px;padding: 20px;}
+    #second{ width: 200px; height: 100px; border: 1px solid blue; }
+</style>
+<body>
+<div id="first"> first</div>
+<div id="second">second</div>
+</body>
+</html>

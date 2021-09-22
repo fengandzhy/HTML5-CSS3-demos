@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    .sphere {
+        width: 60px;
+        height: 60px;
+        background: #9485FD;
+        border-radius: 100%;
+        margin: 280px auto;
+        background: radial-gradient(circle at top center, #c6bff6, #6959d8, #372a91);
+        transform-origin: center -200px;
+        /*animation: clock 4s infinite linear;*/
+        position: relative;
+    }
+    .sphere::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 1px;
+        height: 200px;
+        border-left: 1px #9485FD solid;
+    }
+    @keyframes clock {
+        0% {
+            transform: rotate(0deg)
+        }
+        25% {
+            transform: rotate(30deg)
+        }
+        50% {
+            transform: rotate(0deg)
+        }
+        75% {
+            transform: rotate(-30deg)
+        }
+        100% {
+            transform: rotate(0deg)
+        }
+    }
+</style>
+<body>
+<div class="sphere"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+</head>
+<style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    /*
+    animate-name 检索或设置对象所应用的动画名称。
+    animation-duration 检索或设置对象动画的持续时间
+    animation-iteration-count 检索或设置对象动画的循环次数 其默认值为"1";infinite为无限次数循环
+    animation-direction 检索或设置对象动画在循环中是否反向运动。
+        normal：正常方向。默认值；
+        reverse：反方向运行；
+        alternate：动画先正常运行再反方向运行，并持续交替运行；
+        alternate-reverse：动画先反运行再正方向运行，并持续交替运行。
+    */
+
+    .p {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count:infinite;
+        animation-direction:alternate-reverse;
+    }
+    /*width: 300%;意思就是3倍的屏幕宽度，
+    也就是说屏幕下方出现了进度条，才能把这个宽度看完, 因为是三倍屏幕宽度*/
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+    .p1{
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    .p2{
+        margin-left: 0%;
+        width: 100%;
+    }
+
+</style>
+<body>
+<p class="p">
+    The Caterpillar and Alice looked at each other for some time in silence:
+    at last the Caterpillar took the hookah out of its mouth, and addressed
+    her in a languid, sleepy voice.
+</p>
+
+<p class="p1">
+    The Caterpillar and Alice looked at each other for some time in silence:
+    at last the Caterpillar took the hookah out of its mouth, and addressed
+    her in a languid, sleepy voice.
+</p>
+
+<p class="p2">
+    The Caterpillar and Alice looked at each other for some time in silence:
+    at last the Caterpillar took the hookah out of its mouth, and addressed
+    her in a languid, sleepy voice.
+</p>
+</body>
+</html>

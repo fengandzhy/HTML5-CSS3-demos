@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    默认情况下，父div没有设置高度，它的高度可以被子div任意撑大。
+    当父div有固定高度时，如果子div的高度超过父div的高度，那么子div会超出父div的束缚，这种情况就叫溢出。
+    */
+    *{
+        margin:0;
+        padding:0;
+    }
+    .container{
+        background-color: black;
+        height: 150px; /*给父div添加固定高度*/
+        overflow: hidden; /*隐藏溢出*/
+    }
+
+    .div1{
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+    }
+    .div2{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+</body>
+</html>

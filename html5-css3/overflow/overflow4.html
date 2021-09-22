@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    发现颜色块出现在屏幕右侧，父div浮动有效果，但是没有看到父div的黑色效果，这是因为浮动的div已经失去了其“独霸一行”的能力，
+    */
+    *{
+        margin:0;
+        padding:0;
+    }
+    .container{
+        background-color: black;
+        float: right;/*让父div右浮动*/
+        width:500px;
+    }
+
+    .div1{
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        float:left;
+    }
+    .div2{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        float:left;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+</body>
+</html>

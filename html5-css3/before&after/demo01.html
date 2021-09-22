@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    *{
+        margin:0;
+        padding:0;
+    }
+    #box{
+        width:100px;
+        height:100px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-left:-50px;
+        margin-top:-50px;
+        border:1px solid black;
+    }
+
+    /*伪类里面的元素默认是一个inline元素 但是有position: absolute;定位了就相当于一个block元素
+       伪类就相当于在元素内部又定义了一个元素,但是这个元素是不存在的,但是可以被看到的
+
+    */
+    #box:before{
+        content:'';
+        width:10px;
+        height:10px;
+        position: absolute;
+        border:1px solid red;
+    }
+
+    #box2{
+        width:100px;
+        height:100px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-left:200px;
+        margin-top:200px;
+        border:1px solid black;
+    }
+    /*#box2>div 表示#box2里面第一代的div
+    #box2 div 表示#box2里面所有的div */
+    #box2>div{
+        width:10px;
+        height:10px;
+        border:1px solid red;
+    }
+
+    #box3{
+        width:100px;
+        height:100px;
+
+        /*top:50%;*/
+        /*left:50%;*/
+        margin-left:200px;
+        margin-top:200px;
+        border:1px solid black;
+    }
+
+    #box3>span{
+        width:10px;
+        height:10px;
+        border:1px solid red;
+        position: absolute;
+    }
+    /*position: absolute; position: fixed; 都可以让行内元素变成一个块级元素*/
+    #span{
+        width:100px;
+        height:100px;
+        border:1px solid red;
+        position: absolute;
+    }
+
+</style>
+<body>
+<div id="box"></div>
+<div id="box2">
+    <div>
+
+    </div>
+</div>
+
+<div id="box3">
+    <span>
+
+    </span>
+</div>
+
+<span id="span"></span>
+</body>
+</html>

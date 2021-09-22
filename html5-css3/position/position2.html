@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+</head>
+<style type="text/css">
+    /*
+        我们先将first元素外边距设为20px，那么second元素就得向下偏移40px，所以margin是占据文档空间
+        就是说原本first和second是紧紧挨着的, 但是由于first元素外边距设为20px, 所以second元素就得向下偏移40px
+        但是又由于 position: relative; top: 20px; left: 20px; 所以first相对于它原来的位置向下相右各移动了20px
+        所以看上去那个first和second 两个边是紧挨着的
+    */
+    #first { width: 200px; height: 100px; border: 1px solid red; position: relative; top: 20px; left: 20px;margin: 20px;}
+    #second{ width: 200px; height: 100px; border: 1px solid blue; }
+</style>
+<body>
+<div id="first"> first</div>
+<div id="second">second</div>
+</body>
+</html>

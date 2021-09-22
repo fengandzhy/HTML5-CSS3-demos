@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+</head>
+<style type="text/css">
+    /*
+        像这种例子, 如果子父元素中, 子元素不设置长宽,此时如果不设置position:absolute; 那么此时它的宽度就是跟父元素重合,高度就是里面内容的高度
+        因为块级模型宽度默认是整个父级元素的宽度而高度是0,这里有内容所以高度是内容的高度
+        但如果设置了position:absolute; 此时它脱离的文档流宽度就是里面内容的自然宽度，高度就是内容的高度
+    */
+    #first { width: 200px; height: 100px; border: 1px solid red;}
+    #second{ border: 1px solid blue; position:absolute;}
+</style>
+<body>
+<div id="first"> first
+<div id="second">secondsecondsecondsecondsecondsecondsecondsecond</div>
+</div>
+</body>
+</html>

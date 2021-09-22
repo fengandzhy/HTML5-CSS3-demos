@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+</head>
+<style type="text/css">
+    *{margin:0;padding:0}
+    /*
+    相对定位相对的是它原本在文档流中的位置而进行的偏移，而我们也知道relative定位也是遵循正常的文档流，它没有脱离文档流，
+    但是它的top/left/right/bottom属性是生效的，可以说它是static到absoult的一个中间过渡属性，最重要的是它还占有文档空间，
+    而且占据的文档空间不会随 top / right / left / bottom 等属性的偏移而发生变动，也就是说它后面的元素是依据虚线位置( top / left / right / bottom 等属性生效之前)进行的定位
+    */
+    #first { width: 200px; height: 100px; border: 1px solid red; position: relative; top: 20px; left: 20px;}
+    #second{ width: 200px; height: 100px; border: 1px solid blue; }
+</style>
+<body>
+    <div id="first"> first</div>
+    <div id="second">second</div>
+</body>
+</html>

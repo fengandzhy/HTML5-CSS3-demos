@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    父元素加 overflow: hidden;之前它的高度是0, 因为两个子元素都浮动起来了,它自然不能撑开父元素
+    但是当父元素加入overflow: hidden; 父元素的高度被撑开了, 显然子元素的高度被清除了
+    */
+    *{
+        margin:0;
+        padding:0;
+    }
+    .container{
+        background-color: black;
+        height:20px;
+        overflow: hidden;
+    }
+
+    .div1{
+        background-color: aqua;
+        width: 100px;
+        height: 100px;
+        float:left;
+    }
+    .div2{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        float:left;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+</head>
+<style type="text/css">
+    /*
+        祖先类的margin会让子类的absoulte跟着偏移，而padding却不会让子类的absoulte发生偏移。总结一下，就是absoulte是根据祖先类的border进行的定位。
+    */
+    #first{width: 200px;height: 100px;border: 1px solid red;position: relative;margin:40px;padding:40px;}
+    #second{width: 200px;height:100px;border: 1px solid blue;position: absolute;top:20px;left:20px;}
+</style>
+<body>
+<div id="first">first
+    <div id="second">second</div>
+</div>
+</body>
+</html>
