@@ -6,10 +6,16 @@
 </head>
 <style type="text/css">
     /*
-        当你第一个设置成position:absolute; 的时候, 第二个会飘上来, 因为第一个已经脱离文档流浮动了起来,它原来的空间不被占用,第二个就自然而然的飘动了上来
-        当你第二个设置成position:absolute; 的时候, 第三个会飘上来, 原因与上相同, 但是第二个并不会自己脱离了文档流会飘上去, 因为你没有设置top和left 它会遵循自然的布局,也就是尊重原有第一个元素的存在而排在后面
-        当两个同时设置成position:absolute; 的时候, 第二个会覆盖第一个, 如果两个对象的此属性具有同样的值，那么将依据它们在HTML文档中流的顺序层叠，写在后面的将会覆盖前面的
-        当两个同时设置成position:absolute; 的时候, 但是第一个z-index大于第一个的时候 第一个会覆盖第二个.
+        1. 当你第一个设置成position:absolute; 的时候, 第二个会飘上来,
+        因为第一个已经脱离文档流浮动了起来,它原来的空间不被占用,第二个就自然而然的飘动了上来
+
+        2. 当你第二个设置成position:absolute; 的时候, 第三个会飘上来, 原因与上相同, 但是第二个并不会自己脱离了文档流会飘上去,
+        因为你没有设置top和left 它会遵循自然的布局,也就是尊重原有第一个元素的存在而排在后面
+
+        3. 当两个同时设置成position:absolute; 的时候, 第二个会覆盖第一个, 如果两个对象的此属性具有同样的值，
+        那么将依据它们在HTML文档中流的顺序层叠，写在后面的将会覆盖前面的
+        
+        4. 当两个同时设置成position:absolute; 的时候, 但是第一个z-index大于第一个的时候 第一个会覆盖第二个.
     */
     #first { width: 200px; height: 100px; border: 1px solid red; position:absolute; z-index:2;}
     #second{ width: 200px; height: 100px; border: 1px solid blue; position:absolute;z-index:1;}
