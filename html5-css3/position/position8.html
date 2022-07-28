@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Position</title>
+    <title>Position8</title>
 </head>
 <style type="text/css">
     /*
@@ -10,13 +10,14 @@
         因为块级模型宽度默认是整个父级元素的宽度而高度是0,这里有内容所以高度是内容的高度
         但如果设置了position:absolute; 此时它脱离的文档流宽度就是里面内容的自然宽度，高度就是内容的高度
     */
-    #first { width: 200px; height: 100px; border: 1px solid red;}
-    #second{ border: 1px solid blue; position:absolute;}
-
+    #first { width: 200px; height: 100px; border: 1px solid red;position:absolute;}
+    #second{ border: 1px solid blue;}
+    #third{ border: 1px solid blue; height:30%;}
 </style>
 <body>
 <div id="first"> first
-<div id="second">secondsecondsecondsecondsecondsecondsecondsecond</div>
+    <div id="second">secondsecondsecondsecondsecondsecondsecondsecond</div>
+    <div id="third">secondsecondsecondsecondsecondsecondsecondsecond</div>
 </div>
 </body>
 </html>
