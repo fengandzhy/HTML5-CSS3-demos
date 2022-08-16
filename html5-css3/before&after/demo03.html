@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>清除浮动3</title>
+    <title>伪元素3</title>
 </head>
 <style type="text/css">
 
@@ -14,7 +14,7 @@
     /*如果是display:block; 它是块级元素可以设置宽高 但它并没有漂浮起来 所以它会在div1 div2 div3的底部 被它们盖住
       如果是position:absolute;它也是块级元素, 但它会漂浮起来, 所以它会在div1 div2 div3的右边
     */
-    .outer:after{
+    .outer::after{
         content: '';
         /*display:block;*/
         position:absolute;
